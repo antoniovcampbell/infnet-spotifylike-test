@@ -21,11 +21,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore SpotifyLike/SpotifyLike.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore SpotifyLike/SpotifyLike.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal SpotifyLike/SpotifyLike.sln
 
     - uses: actions/checkout@v4
     - name: Set up JDK 21
@@ -35,4 +35,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file ./JavaSpringboot/spotifylike/pom.xml
