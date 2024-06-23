@@ -9,12 +9,7 @@ namespace SpotifyLike.Repository.Transacao
 {
     public class PlanoRepository : IPlanoRepository
     {
-        private SpotifyContext spotifyContext;
-
-        public PlanoRepository(SpotifyContext spotifyContext)
-        {
-            this.spotifyContext = spotifyContext;
-        }
+        
 
         public Plano GetPlanoById(Guid planoId)
         {
